@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     private int score = 0;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI GameOverText;
+
+    public bool isGameActive = true;
 
     void Start()
     {
@@ -20,22 +23,15 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator SpawnTargets(){
-        while (true)
+        while (isGameActive)
         {
              yield return new WaitForSeconds(SpawnRate);
              int index = UnityEngine.Random.Range(0, targets.Count-1);
-             
+
              Instantiate(targets[index]);
-             UpdateScore(5);
         }
     }
-    private void OnMouseDown(){
-        Destroy(gameObject);
-    }
-    private void OnColliderEnter(Collider other){
-        Destroy(gameObject);
-    }
-    private void UpdateScore(int ScoreToAdd){
+    public void UpdateScore(int ScoreToAdd){
         score += ScoreToAdd;
         scoreText.text = "Score: " + score;
 
