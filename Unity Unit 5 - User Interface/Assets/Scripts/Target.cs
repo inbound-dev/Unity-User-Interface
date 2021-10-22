@@ -65,6 +65,6 @@ public class Target : MonoBehaviour
         restartButton.gameObject.SetActive(true);
     }
     public void RestartGame(){
-        SceneManager.LoadScene(SceneManagement.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
