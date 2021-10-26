@@ -14,8 +14,6 @@ public class Target : MonoBehaviour
 
     public ParticleSystem explosionParticle;
 
-    public Button restartButton;
-
     private float minSpeed = 12;
     private float maxSpeed = 16;
 
@@ -30,8 +28,6 @@ public class Target : MonoBehaviour
         PlayerRB = GetComponent<Rigidbody>();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
-        restartButton.gameObject.SetActive(false);
 
     }
 
@@ -62,9 +58,5 @@ public class Target : MonoBehaviour
     public void GameOver(){
         gameManager.GameOverText.gameObject.SetActive(true);
         gameManager.isGameActive = false;
-        restartButton.gameObject.SetActive(true);
-    }
-    public void RestartGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
