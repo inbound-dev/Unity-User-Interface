@@ -18,9 +18,9 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16;
 
     private float range = 10;
-    public float xRange = 14;
+    private float xRange = 14;
 
-    public float ySpawnPos = 8.25f;
+    private float ySpawnPos = 8.25f;
 
     public int pointVal;
 
@@ -28,6 +28,10 @@ public class Target : MonoBehaviour
         PlayerRB = GetComponent<Rigidbody>();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        PlayerRB.AddForce(RandomForce(), ForceMode.Impulse);
+        PlayerRB.AddTorque(RandomTorque(), RandomTorque(), RandomTorque());
+        transform.position = RandomSpawnPos();
 
     }
 
@@ -38,7 +42,8 @@ public class Target : MonoBehaviour
         return UnityEngine.Random.Range(-range, range);
     }
     Vector3 RandomSpawnPos(){
-        return new Vector3(UnityEngine.Random.Range(-xRange, xRange), ySpawnPos);
+        Vector3 SpawnPos = new Vector3(UnityEngine.Random.Range(-xRange, xRange), ySpawnPos);
+        return SpawnPos;
     }
     private void OnMouseDown(){
         if(gameManager.isGameActive){

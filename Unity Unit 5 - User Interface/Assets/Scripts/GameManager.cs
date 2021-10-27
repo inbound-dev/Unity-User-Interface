@@ -20,10 +20,11 @@ public class GameManager : MonoBehaviour
 
     public bool isGameActive = true;
 
-    void Start()
+    public void StartGame()
     {
         StartCoroutine(SpawnTargets());
 
+        score = 0;
         UpdateScore(0);
 
         TitleText.gameObject.SetActive(false);
