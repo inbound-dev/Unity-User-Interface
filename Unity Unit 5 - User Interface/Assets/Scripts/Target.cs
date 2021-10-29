@@ -18,9 +18,9 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16;
 
     private float range = 10;
-    private float xRange = 14;
+    private float xRange = 4;
 
-    private float ySpawnPos = 8.25f;
+    private float ySpawnPos = 1.5f;
 
     public int pointVal;
 

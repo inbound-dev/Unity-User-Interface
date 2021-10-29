@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
 
-    public float SpawnRate = 1.0f;
+    public GameObject TitleScreen;
+
+    private float SpawnRate = 2.0f;
     private int score = 0;
 
     public TextMeshProUGUI scoreText;
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        TitleScreen.gameObject.SetActive(false);
+
         StartCoroutine(SpawnTargets());
 
         score = 0;
