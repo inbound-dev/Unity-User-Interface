@@ -209,11 +209,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1527823966}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -435,11 +435,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1527823966}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -817,11 +817,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1527823966}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1860,7 +1860,6 @@ MonoBehaviour:
   - {fileID: 7659928174588680577, guid: 8ccd3498045024ddc982552375a572f0, type: 3}
   - {fileID: 1225031180421425594, guid: 79cd64a209f644930a6cc518369f326e, type: 3}
   TitleScreen: {fileID: 1497939009}
-  SpawnRate: 1
   scoreText: {fileID: 925220036}
   GameOverText: {fileID: 1607164387}
   TitleText: {fileID: 1652685832}

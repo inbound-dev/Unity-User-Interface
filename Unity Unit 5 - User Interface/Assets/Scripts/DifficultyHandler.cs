@@ -9,6 +9,8 @@ public class DifficultyHandler : MonoBehaviour
 
     private GameManager gameManager;
 
+    public int difficulty = 1;
+
 
     void Start()
     {
@@ -20,6 +22,6 @@ public class DifficultyHandler : MonoBehaviour
     }
     void setDifficulty(){
         Debug.Log(gameObject.name + " Was Clicked");
-        gameManager.StartGame();
+        gameManager.StartGame(difficulty);
     }
 }
